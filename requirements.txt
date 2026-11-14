@@ -1,0 +1,12 @@
+# Experiments ran on the Kaggle Python GPU image (Tesla T4), November 2026.
+# No package was pinned; these are the libraries the notebooks import.
+torch
+numpy
+pandas
+scipy
+scikit-learn
+pyarrow
+matplotlib
+huggingface_hub   # 06_cbramod only: downloads braindecode/cbramod-pretrained
+safetensors       # 06_cbramod only
+# mamba_ssm is optional (USE_OFFICIAL_MAMBA2=False by default; a pure-PyTorch Mamba-2 is included)
