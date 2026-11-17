@@ -33,7 +33,7 @@ fig, ax = plt.subplots(figsize=(7.16, 2.55))
 ax.set_xlim(0, 100); ax.set_ylim(0, 30); ax.axis("off")
 
 # ---------- (a) label propagation sets file length ----------
-ax.text(0.5, 29.3, "(a) Labelling sets the file length", fontweight="bold", va="top", fontsize=6.8)
+ax.text(0.5, 29.3, "(a) Labelling sets the recording length", fontweight="bold", va="top", fontsize=6.8)
 ax.add_patch(Rectangle((5, 19.2), 22, 5.6, fc=STAT, ec="none", zorder=0))
 ax.text(16, 25.3, "stationary period", ha="center", fontsize=5.8, color="0.3")
 trace(ax, 1, 31, 22, seed=1)
@@ -41,13 +41,13 @@ for k, xs in enumerate(np.arange(6, 27, 2.8)):
     ax.add_patch(Rectangle((xs, 19.9), 1.4, 0.45, fc=LAB, ec="none", zorder=3))
 ax.add_patch(Rectangle((15.8, 19.9), 1.4, 0.45, fc="#e07b00", ec="none", zorder=4))
 ax.text(16.5, 18.6, "1 expert label copied to every segment", ha="center", va="top", fontsize=5.8)
-ax.text(1, 16.2, "→ one long file, many label rows\n    (3–9 or ≥10 votes)", va="top", fontsize=6.2)
+ax.text(1, 16.2, "→ one long recording, many label rows\n    (3–9 or ≥10 votes)", va="top", fontsize=6.2)
 trace(ax, 12, 19, 9.5, seed=2)
 span(ax, 12, 19, 7.2, "≈50 s")
-ax.text(1, 4.6, "→ isolated excerpt: file ≈ 50 s\n    (93% of 1–2-vote recordings)", va="top", fontsize=6.2)
+ax.text(1, 4.6, "→ isolated excerpt: recording ≈ 50 s\n    (93% of 1–2-vote recordings)", va="top", fontsize=6.2)
 
 # ---------- (b) a 200 s window shows where the file ends ----------
-ax.text(34.5, 29.3, "(b) 200 s window: file end visible", fontweight="bold", va="top", fontsize=6.8)
+ax.text(34.5, 29.3, "(b) 200 s window: recording end visible", fontweight="bold", va="top", fontsize=6.8)
 X0, X1 = 36, 64; C0, C1 = 46.5, 53.5           # 200 s window, central 50 s
 ax.add_patch(Rectangle((C0, 19.8), C1 - C0, 4.4, fc=LAB, alpha=0.35, ec="none", zorder=0))
 trace(ax, X0, X1, 22, seed=4); window(ax, X0, X1, 22)
@@ -72,7 +72,7 @@ mir = d[::-1][: int(len(d) * S / (F1 - F0))]
 trace(ax, F1, F1 + S, 10, data=mir * (np.abs(d).max() / (np.abs(mir).max() + 1e-9)) * (np.abs(mir).max() / np.abs(d).max()), color=MIRROR)
 window(ax, F0 + S, F1 + S, 10, h=1.9)
 ax.text(F1 + S + 0.5, 10, "mirror\nfill", va="center", fontsize=5.8, color=MIRROR)
-span(ax, F0, F1, 7.4, "50 s file")
+span(ax, F0, F1, 7.4, "50 s recording")
 ax.text(70, 16.6, "zero padding → the cue reappears", fontsize=6.2, va="top")
 ax.text(70, 4.6, "fix: mirror fill (+ random truncation\nfor long windows) hides\nthe boundary", va="top", fontsize=6.2)
 

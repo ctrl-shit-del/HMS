@@ -1,0 +1,10 @@
+{
+ "primary": "ge10/all",
+ "mean_proxy_kl": {
+  "none": 0.45832,
+  "ge10/all": 0.41891,
+  "ge10/noctx": 0.46358,
+  "ge10/self": 0.42659,
+  "em": 1.50105
+ }
+}

@@ -1,29 +1,38 @@
 version,model,context_s,training,seed,prior_shift,constant,private_kl,public_kl,note
-2,mamba,200,ba_noreweight,42,none,,0.592222,0.495119,
-5,mamba,200,s1_original_shortcut,42,none,,0.542001,0.446382,
-6,mamba,50,s1,42,none,,0.616707,0.511592,
-8,gru,200,ba_noreweight,42,none,,0.626896,0.515803,
-9,transformer,200,ba_noreweight,42,none,,0.635243,0.526284,
-10,gru,200,s1_original_shortcut,42,none,,0.577058,0.470861,
-11,transformer,200,s1_original_shortcut,42,none,,0.583351,0.475581,
-12,gru,50,s1,42,none,,0.642315,0.523472,
-13,transformer,50,s1,42,none,,0.648997,0.533770,
-14,cnn,50,s1,42,none,,0.645963,0.546354,
+2,mamba,200.0,ba_noreweight,42.0,none,,0.592222,0.495119,
+5,mamba,200.0,s1_original_shortcut,42.0,none,,0.542001,0.446382,
+6,mamba,50.0,s1,42.0,none,,0.616707,0.511592,
+8,gru,200.0,ba_noreweight,42.0,none,,0.626896,0.515803,
+9,transformer,200.0,ba_noreweight,42.0,none,,0.635243,0.526284,
+10,gru,200.0,s1_original_shortcut,42.0,none,,0.577058,0.470861,
+11,transformer,200.0,s1_original_shortcut,42.0,none,,0.583351,0.475581,
+12,gru,50.0,s1,42.0,none,,0.642315,0.523472,
+13,transformer,50.0,s1,42.0,none,,0.648997,0.53377,
+14,cnn,50.0,s1,42.0,none,,0.645963,0.546354,
 15,constant,,,,none,all,0.989693,0.975832,constant = mean label of all training EEGs
 16,constant,,,,none,noctx,0.990905,0.981253,constant = mean label of short-excerpt training EEGs
 17,constant,,,,none,ge10,0.950651,0.940303,constant = mean label of >=10-vote training EEGs
-18,mamba,50,s1,42,noctx,,0.551557,0.455136,
-19,mamba,200,ba_noreweight,42,noctx,,0.528571,0.442332,
-20,mamba,50,s1,42,ge10,,0.524216,0.431618,
-21,mamba,200,s1_original_shortcut,42,ge10,,0.528213,0.438629,
-22,mamba,200,ba_noreweight,42,ge10,,0.504660,0.420012,
-23,gru,50,s1,42,ge10,,0.545799,0.446865,
-24,transformer,50,s1,42,ge10,,0.547524,0.456008,
-25,gru,200,ba_noreweight,42,ge10,,0.538079,0.445479,
-26,transformer,200,ba_noreweight,42,ge10,,0.542675,0.451757,
-28,gru,200,s1_original_shortcut,42,ge10,,0.554266,0.456565,
-29,transformer,200,s1_original_shortcut,42,ge10,,0.586988,0.490206,
-32,mamba,200,ba_noreweight,1042,ge10,,0.501420,0.410949,
-33,mamba,200,ba_noreweight,2042,ge10,,0.491458,0.413634,
-34,gru,200,ba_noreweight,1042,ge10,,0.537822,0.438267,
-35,gru,200,ba_noreweight,2042,ge10,,0.544712,0.446057,Kaggle description says 1042; CFG cell confirms 2042
+18,mamba,50.0,s1,42.0,noctx,,0.551557,0.455136,
+19,mamba,200.0,ba_noreweight,42.0,noctx,,0.528571,0.442332,
+20,mamba,50.0,s1,42.0,ge10,,0.524216,0.431618,
+21,mamba,200.0,s1_original_shortcut,42.0,ge10,,0.528213,0.438629,
+22,mamba,200.0,ba_noreweight,42.0,ge10,,0.50466,0.420012,
+23,gru,50.0,s1,42.0,ge10,,0.545799,0.446865,
+24,transformer,50.0,s1,42.0,ge10,,0.547524,0.456008,
+25,gru,200.0,ba_noreweight,42.0,ge10,,0.538079,0.445479,
+26,transformer,200.0,ba_noreweight,42.0,ge10,,0.542675,0.451757,
+28,gru,200.0,s1_original_shortcut,42.0,ge10,,0.554266,0.456565,
+29,transformer,200.0,s1_original_shortcut,42.0,ge10,,0.586988,0.490206,
+32,mamba,200.0,ba_noreweight,1042.0,ge10,,0.50142,0.410949,
+33,mamba,200.0,ba_noreweight,2042.0,ge10,,0.491458,0.413634,
+34,gru,200.0,ba_noreweight,1042.0,ge10,,0.537822,0.438267,
+35,gru,200.0,ba_noreweight,2042.0,ge10,,0.544712,0.446057,Kaggle description says 1042; CFG cell confirms 2042
+36,mamba,200.0,ba_noreweight,42.0,none,,0.592222,0.495119,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 2 exactly
+38,mamba,50.0,s1,42.0,none,,0.616707,0.511592,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 6 exactly
+39,mamba,200.0,s1_original_shortcut,42.0,none,,0.542001,0.446382,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 5 exactly
+41,gru,200.0,ba_noreweight,42.0,none,,0.626896,0.515803,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 8 exactly
+43,gru,200.0,s1_original_shortcut,42.0,none,,0.577058,0.470861,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 10 exactly
+44,gru,50.0,s1,42.0,none,,0.642315,0.523472,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 12 exactly
+46,transformer,50.0,s1,42.0,none,,0.648997,0.53377,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 13 exactly
+47,transformer,200.0,s1_original_shortcut,42.0,none,,0.583351,0.475581,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 11 exactly
+49,transformer,200.0,ba_noreweight,42.0,none,,0.635243,0.526284,resubmission with the updated notebook (PRIOR_SHIFT=None); reproduces version 9 exactly
